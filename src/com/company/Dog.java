@@ -1,14 +1,13 @@
 package com.company;
 
 public class Dog extends Entity {
+    public Dog(String name, int size) {
+        super(name, size);
+    }
+
     @Override
     public void print() {
         System.out.println("Woof");
         System.out.println(getName() + " " + getSize());
-    }
-
-    public Dog(String name, int size) {
-        this.setName(name);
-        this.setSize(size);
     }
 }
