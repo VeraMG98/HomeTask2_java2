@@ -11,8 +11,7 @@ public class Cat extends Entity {
 
     @Override
     public void print() {
-        System.out.println("Meow");
-        System.out.println(getName() + " " + getSize());
+        System.out.println(getName() + " size " + getSize() + " \uD83D\uDC08 ");
     }
 
 }

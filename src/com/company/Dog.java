@@ -9,7 +9,6 @@ public class Dog extends Entity {
 
     @Override
     public void print() {
-        System.out.println("Woof");
-        System.out.println(getName() + " " + getSize());
+        System.out.println(getName() + " size "  + getSize() + " \uD83D\uDC15");
     }
 }

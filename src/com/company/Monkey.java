@@ -8,7 +8,6 @@ public class Monkey extends Entity {
 
     @Override
     public void print() {
-        System.out.println("Y-y");
-        System.out.println(getName() + " " + getSize());
+        System.out.println(getName() + " size " + getSize() + " \uD83D\uDC12");
     }
 }
