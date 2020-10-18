@@ -1,6 +1,7 @@
 package com.company;
 
 public class Monkey extends Entity {
+    public Monkey() {}
     public Monkey(String name, int size) {
         super(name, size);
     }

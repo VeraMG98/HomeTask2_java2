@@ -3,13 +3,26 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-	    Cat cat = new Cat("Cat", 3);
-	    Dog dog = new Dog("Dog", 15);
-	    Monkey monkey = new Monkey("Monkey", 7);
+	    createObject("Cat", 4).print();
+	    createObject("Dog", 10).print();
+        createObject("Monkey", 7).print();
+        createObject("Horse", 100).print();
+    }
 
-	    Entity[] entities = new Entity[] {cat, dog, monkey};
-        for (Entity entity: entities) {
-            entity.print();
+    public static Entity createObject(String className, int size) {
+        if (className.equals(Cat.class.getSimpleName())) {
+            return new Cat(className, size);
+        } else if (className.equals(Dog.class.getSimpleName())) {
+            return new Dog(className, size);
+        } else if (className.equals(Monkey.class.getSimpleName())) {
+            return new Monkey(className, size);
+        }else{
+            return new Entity() {
+                @Override
+                public void print() {
+                    System.out.println("No entity");
+                }
+            };
         }
     }
 }
